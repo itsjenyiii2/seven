@@ -1,17 +1,35 @@
 using UnityEngine;
 
+
 public class CameraFollow : MonoBehaviour
 {
     public float FollowSpeed = 2f;
     public float yOffset = 1f;
     public Transform target;
 
-    // Update is called once per frame
-    void Update()
+    public bool bounds;
+    public Vector3 miniCameraPos;
+    public Vector3 maxCameraPos;
+
+// Tady použita Ai
+    void LateUpdate()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+       
+        Vector3 desiredPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
+
+        // 2. Clamp the desired position *before* applying Slerp
+        if (bounds)
+        {
+            desiredPos.x = Mathf.Clamp(desiredPos.x, miniCameraPos.x, maxCameraPos.x);
+            desiredPos.y = Mathf.Clamp(desiredPos.y, miniCameraPos.y, maxCameraPos.y);
+            desiredPos.z = Mathf.Clamp(desiredPos.z, miniCameraPos.z, maxCameraPos.z);
+        }
+
+        // 3. Smoothly move the camera to the clamped desired position
+        transform.position = Vector3.Slerp(transform.position, desiredPos, FollowSpeed * Time.deltaTime);
     }
+
+  
 }
 
 public class Move : MonoBehaviour
@@ -39,7 +57,7 @@ public class Move : MonoBehaviour
     public class CameraClamp : MonoBehaviour
     {
         private Transform targetToFollow;
- void Update()
+        void Update()
         {
             transform.position = new Vector3(
                 Mathf.Clamp(targetToFollow.position.x, -12f, 1.5f),
@@ -47,4 +65,6 @@ public class Move : MonoBehaviour
                 transform.position.z);
         }
     }
+    
+
 }

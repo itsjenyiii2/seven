@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: b938e09ec2be246c88d4781efc5a9c3f
+guid: 137b4c7d4d20441f78c89c8e8842e5cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1929834416523346238
-    second: spike_0
+      213: 6782813536761691038
+    second: controls_0
+  - first:
+      213: 3303988218376537383
+    second: controls_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,14 +116,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spike_0
+      name: controls_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 15
         y: 38
-        width: 45
-        height: 44
-      alignment: 9
+        width: 21
+        height: 19
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ce7dc7a2d9d735e0800000000000000
-      internalID: -1929834416523346238
+      spriteID: e9b346c89f4612e50800000000000000
+      internalID: 6782813536761691038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 38
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725c86287cf1add20800000000000000
+      internalID: 3303988218376537383
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 96c6634052e904262b644c71e2d98af3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spike_0: -1929834416523346238
+      controls_0: 6782813536761691038
+      controls_1: 3303988218376537383
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

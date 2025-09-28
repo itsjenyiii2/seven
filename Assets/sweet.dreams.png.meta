@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: b938e09ec2be246c88d4781efc5a9c3f
+guid: 86be7f66918bf44d6839bf5276f4228e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1929834416523346238
-    second: spike_0
+      213: -3522078400702562978
+    second: sweet.dreams_0
+  - first:
+      213: 6716122727134022977
+    second: sweet.dreams_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,14 +116,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spike_0
+      name: sweet.dreams_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 38
-        width: 45
-        height: 44
-      alignment: 9
+        x: 26
+        y: 26
+        width: 137
+        height: 35
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ce7dc7a2d9d735e0800000000000000
-      internalID: -1929834416523346238
+      spriteID: e5d3c07fa501f1fc0800000000000000
+      internalID: -3522078400702562978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sweet.dreams_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 57
+        width: 125
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d40ca6906743d50800000000000000
+      internalID: 6716122727134022977
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 96c6634052e904262b644c71e2d98af3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spike_0: -1929834416523346238
+      sweet.dreams_0: -3522078400702562978
+      sweet.dreams_1: 6716122727134022977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

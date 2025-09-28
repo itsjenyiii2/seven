@@ -1,24 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
+//puuzita AI
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector3 initialSpawnPosition; 
-    public GameObject explosionPrefab; 
+    private Vector3 checkpointPos;
+    public GameObject explosionPrefab;
 
     void Start()
     {
-        initialSpawnPosition = transform.position;
+        checkpointPos = transform.position;
     }
 
     public float respawnDelay = 0.5f;
 
-void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Spike"))
         {
-        
-    
+
+
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
 
@@ -28,18 +29,14 @@ void OnCollisionEnter2D(Collision2D collision)
 
     private IEnumerator ExplosionAndRespawn()
     {
-        // 1. Particle spawning logic is now removed from here.
-
-        // 2. Wait for the visual effect to play out
         yield return new WaitForSeconds(respawnDelay);
 
-        // 3. Teleport and Reset Physics (Respawn)
-        transform.position = initialSpawnPosition;
+        transform.position = checkpointPos;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero; // Use .velocity
+            rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
 
@@ -48,4 +45,9 @@ void OnCollisionEnter2D(Collision2D collision)
         GetComponent<Collider2D>().enabled = true;
     }
     
+    public void UpdateCheckpoint(Vector3 pos)
+    {
+        checkpointPos = pos;
+    }   
+
 }
